@@ -2,25 +2,28 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./View/Home";
+import TableShow from "./View/Table";
+
+
+import {BrowserRouter,Switch,Route} from "react-router-dom";
+import Sidebar from "./Components/Sidebar";
+function App(): JSX.Element {
+    return (
+        <div className="app-container">
+            <Sidebar/>
+            <div className="content-container">
+            <BrowserRouter>
+                <Switch>
+                    <Route  path="/home" component={Home}/>
+                    <Route path="/table" component={TableShow}/>
+                    <Route path="/*" component={Home}/>
+                </Switch>
+            </BrowserRouter>
+            </div>
+        </div>
+
+    );
 }
 
 export default App;
