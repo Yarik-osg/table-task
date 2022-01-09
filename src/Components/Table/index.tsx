@@ -6,8 +6,8 @@ import {StyledInput} from "./styles";
 
 const TableShow = (): JSX.Element => {
     const [heroes, setHeroes] = useState<Array<object | any>>([])
-    const [searchTerm, setSearchTerm] = useState<string>('');
-    const [searchTermButton, setSearchTermButton] = useState<string>('');
+    const [searchHero, setSearchHero] = useState<string>('');
+    const [searchHeroConst, setSearchHeroConst] = useState<string>('');
     const [searchResults, setSearchResults] = useState<Array<object>>([]);
 
     async function People() {
@@ -18,15 +18,15 @@ const TableShow = (): JSX.Element => {
     }
 
     const handleChange = (event: { target: { value: SetStateAction<string> } }) => {
-        setSearchTerm(event.target.value);
+        setSearchHero(event.target.value);
         setSearchResults([])
-        setSearchTermButton('')
+        setSearchHeroConst('')
     }
 
     function SearchFunc() {
-        setSearchTermButton(searchTerm)
+        setSearchHeroConst(searchHero)
         const results = heroes.filter((person: { name: string; }) => {
-            return (person.name.toLowerCase().includes(searchTerm));
+            return (person.name.toLowerCase().includes(searchHero));
         });
         setSearchResults(results);
     }
@@ -39,7 +39,7 @@ const TableShow = (): JSX.Element => {
         <div>
             <StyledInput placeholder="Type text here..."
                          type="text"
-                         value={searchTerm}
+                         value={searchHero}
                          onChange={handleChange}/>
 
             <Button type="primary"
@@ -48,7 +48,7 @@ const TableShow = (): JSX.Element => {
                 Search
             </Button>
             <Table columns={columns}
-                   dataSource={searchResults.length < 1 && !searchTermButton
+                   dataSource={searchResults.length < 1 && !searchHeroConst
                        ? heroes
                        : searchResults}/>
         </div>
