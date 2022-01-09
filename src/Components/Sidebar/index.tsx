@@ -17,7 +17,6 @@ const Sidebar = () => {
                         Table
                     </a>
                 </MenuBlock.Item>
-
             </MenuBlock>
         </SidebarBlock>
     );
