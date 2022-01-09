@@ -1,10 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+First you need to clone my repository to your computer.
 
-## Available Scripts
+You can do this by clicking the green "Code" button and following the instructions provided there
 
-In the project directory, you can run:
+The next step is to open my project using any software development tool
+
+Next, open the terminal and type "npm install" and wait for the download to complete
+
+The last step is to type "npm start" in the terminal and the project will start
+
+More scripts can be seen below
+
 
 ### `npm start`
 
