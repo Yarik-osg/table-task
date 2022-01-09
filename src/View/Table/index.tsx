@@ -44,7 +44,6 @@ const TableShow = (): JSX.Element => {
             />
             <button onClick={SearchFunc}>Search</button>
             <Table columns={columns} dataSource={searchResults.length < 1 && !searchTermButton ? heroes : searchResults}/>
-
         </div>
     );
 };
