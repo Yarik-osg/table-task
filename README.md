@@ -4,7 +4,7 @@ First you need to clone my repository to your computer.
 
 You can do this by clicking the green "Code" button and following the instructions provided there
 
-The next step is to open my project using any software development tool
+The next step is to open my project using software development tool(Webstorm, VsCode etc)
 
 Next, open the terminal and type "npm install" and wait for the download to complete
 
