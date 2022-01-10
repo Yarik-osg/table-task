@@ -35,7 +35,6 @@ const TableShow = (): JSX.Element => {
         setSearchResults([])
         setSearchHeroConst('')
     }
-
     /**
      *This function uses a filter method that sorts the contents of our data by the text we enter*
      *
@@ -49,11 +48,6 @@ const TableShow = (): JSX.Element => {
         });
         setSearchResults(results);
     }
-
-    /**
-     *This method works after the first renter and calls the function of obtaining data about the heroes of the public API
-     *
-     */
 
     useEffect(() => {
         People()
