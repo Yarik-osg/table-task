@@ -1,0 +1,37 @@
+{
+	"tags":
+	{
+		"allowUnknownTags" : true
+	},
+	"plugins":[
+		 "plugins/markdown"
+		,"/table-task/node_modules/tsdoc/template/plugins/TSDoc.js"
+	],
+	"opts":
+	{
+		"template"	:"/table-task/node_modules/tsdoc/template",
+		"recurse"	:"true"
+	},
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false
+	},
+	"source":
+	{
+		"includePattern": "(\\.d)?\\.ts$"
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	},
+	"tsdoc":{
+		"source"		:"/table-task/src/",
+		"destination"	:"/table-task/docs",
+		"tutorials"		:"",
+		"systemName"	: "table-task",
+		"footer"		: "",
+		"copyright"		: "table-task Copyright © 2022 yaros.",
+		"outputSourceFiles" : true,
+		"commentsOnly": true
+	}
+}

@@ -8,29 +8,26 @@ import {StyledInput} from "./styles";
  *
  * The main function of the "Table" page which performs all internal functions and renders our page
  */
-
 const TableShow = (): JSX.Element => {
     const [heroes, setHeroes] = useState<Array<object | any>>([])
     const [searchHero, setSearchHero] = useState<string>('');
     const [searchHeroConst, setSearchHeroConst] = useState<string>('');
     const [searchResults, setSearchResults] = useState<Array<object>>([]);
-
     /**
      *This async function gets data from public API "SWAPI.DEV"
      *
-     * @return data.results data about heroes from Star Wars
+     * @return data.results[array] about heroes from Star Wars
      */
     async function People() {
         const res = await fetch('https://swapi.dev/api/people/?format=json')
         const data = await res.json();
-        console.log(data.results)
         setHeroes(data.results)
         return data.results
     }
 
     /**
      * This function works on each entered character in the input, and puts the contents of that field in our variable
-     * @param event this is our content of the input field
+     * @param event{string} this is our content of the input field
      */
     const handleChange = (event: { target: { value: SetStateAction<string> } }) => {
 
@@ -61,7 +58,6 @@ const TableShow = (): JSX.Element => {
     useEffect(() => {
         People()
     }, [])
-
     return (
         <div>
             <StyledInput placeholder="Type text here..."
