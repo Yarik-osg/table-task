@@ -1,3 +1,6 @@
+/**
+ * Array of column names of our data, also in each column imported sorting in ascending and descending order
+ */
 export const columns = [
     {
         title: 'Name',

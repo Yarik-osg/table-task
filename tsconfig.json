@@ -22,5 +22,16 @@
   },
   "include": [
     "src"
-  ]
+  ],"typedocOptions": {
+  "entryPoints": [ "src/Components/Home/index.tsx",
+    "src/Components/Home/styles.tsx",
+    "src/Components/Table/index.tsx",
+    "src/Components/Table/styles.tsx",
+    "src/Components/Sidebar/index.tsx",
+    "src/Components/Sidebar/styles.tsx",
+    "src/App.tsx"
+  ],
+  "out": "docs/td",
+
+}
 }
