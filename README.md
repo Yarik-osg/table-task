@@ -10,6 +10,16 @@ Next, open the terminal and type "npm install" and wait for the download to comp
 
 The last step is to type "npm start" in the terminal and the project will start
 
+# Documentation
+
+If you want to open the documentation to get acquainted in more detail with the project:
+
+- Open a project
+- Navigate to the "docs" folder
+- Open the modules.html file
+
+
+
 More scripts can be seen below
 
 
